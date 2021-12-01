@@ -167,7 +167,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
   margin: 0 auto;
 }
@@ -388,6 +388,7 @@ ul {
 }
 
 /* ---------------------------------------------постоянные клиенты------------------------------------- */
+
 .clients-title {
   font-weight: 700;
   font-size: 36px;
@@ -399,31 +400,68 @@ ul {
   padding-bottom: 50px;
 }
 
-.clients-list {
+.clients-icon-list {
   padding-bottom: 94px;
   display: flex;
 }
-
-.clients-item {
+.clients-item-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+.clients-item-list:last-child {
+  margin-right: 0px;
+}
+.clients-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  color: var(--icon-color);
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
-  box-sizing: border-box;
   border-radius: 4px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin-right: 30px;
-  cursor: pointer;
 }
 
-.clients-item:hover,
-.clients-item:focus {
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+
+.clients-icon-link:hover .clients-icon,
+.clients-icon-link:focus .clients-icon {
+  fill: #2196f3;
+}
+
+.clients-icon-link:hover,
+.clients-icon-link:focus {
   border: 1px solid #2196f3;
+}
+
+/* .clients-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
 }
 
 .clients-item:last-child {
   margin-right: 0px;
+}
+
+.clients-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .clients-item-icon {
@@ -432,15 +470,10 @@ ul {
   fill: #afb1b8;
 }
 
-.clients-item-icon:hover,
-.clients-item-icon:focus {
-  fill: #2196f3;
-}
-
-/* .clients-icon-bgc {
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
+.clients-icon-link:hover,
+.clients-item-link:focus {
+  color: #2196f3;
+  border: 1px solid #2196f3;
 } */
 
 /* -------------------------------------------стилизация футера---------------------------------------- */
